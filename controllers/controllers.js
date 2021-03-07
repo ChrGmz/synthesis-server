@@ -4,30 +4,6 @@ const path = require('path');
 
 const BASE_PATH = path.join(__dirname, '../samples');
 
-// async function getSampleNames(ctx) {
-//   try {
-//     const folders = await readdir(BASE_PATH);
-//     const samples = [];
-//     const regex = /^[^.].*$/;
-
-//     for (folder of folders) {
-//       if (!regex.test(folder)) continue;
-//       const FOLDER_PATH = path.join(BASE_PATH, `${folder}`);
-//       const _samples = await readdir(FOLDER_PATH);
-//       _samples.forEach((sample) => {
-//         if (!regex.test(sample)) return;
-//         else samples.push({ category: folder, name: sample });
-//       });
-//     }
-
-//     ctx.body = samples;
-//     ctx.status = 200;
-//   } catch (error) {
-//     console.log(error);
-//     ctx.status = 500;
-//   }
-// }
-
 async function getSampleNames(ctx) {
   try {
     const folders = await readdir(BASE_PATH);

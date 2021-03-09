@@ -1,7 +1,6 @@
 const mongoose = require('./index');
 
-//POKEMON
-const topicSchema = new mongoose.Schema(
+const schema = new mongoose.Schema(
   {
     title: String,
     score: Number,
@@ -11,6 +10,6 @@ const topicSchema = new mongoose.Schema(
   }
 );
 
-const Topic = mongoose.model('topics', topicSchema);
+const X = mongoose.model('X', schema);
 
-module.exports = { Topic };
+module.exports = { X };

@@ -5,10 +5,10 @@ const cors = require('@koa/cors');
 const chalk = require('chalk');
 const router = require('./router');
 const app = new Koa();
-const PORT = 3000;
+const PORT = 3001;
 
-app.use(cors());
 app.use(morgan('dev'));
+app.use(cors());
 
 app.use(router.routes());
 app.use(router.allowedMethods());
